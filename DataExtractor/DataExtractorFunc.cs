@@ -21,6 +21,11 @@ namespace DataExtractor
             var location = req.Query["location"].FirstOrDefault();
 
 
+            if (_httpClient.BaseAddress == null)
+            {
+                return new BadRequestResult();
+            }
+
             UriBuilder uriBuilder = new UriBuilder(_httpClient.BaseAddress);
 
             var query = HttpUtility.ParseQueryString(uriBuilder.Query);

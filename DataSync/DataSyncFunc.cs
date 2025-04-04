@@ -14,7 +14,7 @@ namespace DataSync
         private readonly HttpClient _getLocationFuncHttpClient;
         private readonly HttpClient _dataExtractorFuncHttpClient;
 
-        public DataSyncFunc(ILogger<DataSyncFunc> logger, IHttpClientFactory httpClientFactory)
+        public DataSyncFunc(IHttpClientFactory httpClientFactory)
         {
             _getLocationFuncHttpClient = httpClientFactory.CreateClient(StringConstants.GetLocationFuncHttpClientName);
             _dataExtractorFuncHttpClient = httpClientFactory.CreateClient(StringConstants.DataExtractorFuncHttpClientName);

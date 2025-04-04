@@ -20,7 +20,6 @@ namespace LogInsert
 
 
         [Function(nameof(LogInsertFunc))]
-
         public async Task RunAsync([ServiceBusTrigger("weather-data-process", "your_subscription", Connection = "your_connection_string")]
             ServiceBusReceivedMessage message,
             ServiceBusMessageActions messageActions)

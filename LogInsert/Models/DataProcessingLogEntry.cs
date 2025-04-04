@@ -7,7 +7,7 @@ namespace LogInsert.Models
     {
         public string ProcessingMessageID { get; set; }
         public bool IsLoginSuccessful { get; set; }
-        public string PartitionKey { get; set; } = "weather-data-process";  // Default partition
+        public string PartitionKey { get; set; } = "weather-data-process";
         public string RowKey { get; set; }
         public DateTimeOffset? Timestamp { get; set; }
         public ETag ETag { get; set; }
